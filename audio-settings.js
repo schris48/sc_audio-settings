@@ -1,40 +1,47 @@
-function createCustomSettingsPlugin() {
-    var settingsMenu = document.createElement('div');
-    settingsMenu.className = 'custom-settings-menu';
+videojs.registerPlugin('customSettingsMenu', function() {
+    var player = this;
+  
+    // Create a div for the settings menu
+    var settingsMenu = document.createElement("div");
+    settingsMenu.className = "custom-settings-menu";
+  
+    // Create a cog icon for the settings menu
+    var cogIcon = document.createElement("div");
+    cogIcon.className = "cog-icon";
+    cogIcon.innerHTML = "&#x2699;"; // Unicode for cog icon
+  
+    // Create a div for the CC and DV buttons
+    var ccDvButtons = document.createElement("div");
+    ccDvButtons.className = "cc-dv-buttons";
+  
+    // Create the CC button
+    var ccButton = document.createElement("button");
+    ccButton.className = "vjs-control vjs-button vjs-closed-caption-button";
+    ccButton.innerHTML = "<span class='vjs-icon-placeholder' aria-hidden='true'></span><span class='vjs-control-text' aria-live='polite'>CC</span>";
     
-    var cogIcon = document.createElement('i');
-    cogIcon.className = 'fas fa-cog';
-    
-    var ccButton = document.createElement('button');
-    ccButton.textContent = 'CC';
-    ccButton.className = 'custom-settings-button';
-    
-    var dvButton = document.createElement('button');
-    dvButton.textContent = 'DV';
-    dvButton.className = 'custom-settings-button';
-    
+    // Create the DV button
+    var dvButton = document.createElement("button");
+    dvButton.className = "vjs-control vjs-button vjs-display-video-button";
+    dvButton.innerHTML = "<span class='vjs-icon-placeholder' aria-hidden='true'></span><span class='vjs-control-text' aria-live='polite'>DV</span>";
+  
+    // Append the CC and DV buttons to the ccDvButtons div
+    ccDvButtons.appendChild(ccButton);
+    ccDvButtons.appendChild(dvButton);
+  
+    // Append the cog icon and ccDvButtons to the settingsMenu
     settingsMenu.appendChild(cogIcon);
-    settingsMenu.appendChild(ccButton);
-    settingsMenu.appendChild(dvButton);
-    
-    cogIcon.addEventListener('click', function() {
-      if (settingsMenu.classList.contains('expanded')) {
-        settingsMenu.classList.remove('expanded');
+    settingsMenu.appendChild(ccDvButtons);
+  
+    // Append the settingsMenu to the control bar
+    var controlBar = player.controlBar.el();
+    controlBar.appendChild(settingsMenu);
+  
+    // Add click event listener for the cog icon to toggle the settings menu
+    cogIcon.addEventListener("click", function() {
+      if (ccDvButtons.style.display === "block") {
+        ccDvButtons.style.display = "none";
       } else {
-        settingsMenu.classList.add('expanded');
+        ccDvButtons.style.display = "block";
       }
     });
-    
-    var playerContainer = document.querySelector('.brightcove-player-container');
-    playerContainer.appendChild(settingsMenu);
-  }
-  
-  videojs.registerPlugin('customSettingsPlugin', function() {
-    var player = this;
-    player.on('ready', function() {
-      createCustomSettingsPlugin();
-    });
-  });
-  
-  var player = videojs('your-video-player-id');
-  player.customSettingsPlugin();  
+  });  
