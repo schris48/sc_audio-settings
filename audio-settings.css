@@ -1,32 +1,30 @@
+/* Custom styles for the settings menu */
 .custom-settings-menu {
-    display: inline-block;
     position: relative;
   }
   
-  .custom-settings-button {
+  /* Style for the cog icon */
+  .cog-icon {
     display: block;
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    margin: 5px;
-  }
-  
-  .custom-settings-menu i {
     font-size: 24px;
-    margin-right: 10px;
     cursor: pointer;
   }
   
-  .custom-settings-menu.expanded .custom-settings-button {
-    display: block;
+  /* Style for the CC and DV buttons */
+  .cc-dv-buttons {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  .custom-settings-menu.expanded i {
-    margin-right: 0;
+  /* Style for CC and DV buttons */
+  .vjs-control.vjs-button.vjs-closed-caption-button,
+  .vjs-control.vjs-button.vjs-display-video-button {
+    margin: 5px 0;
   }
-  
-  .brightcove-player-container {
-    position: relative;
-  }
-  
