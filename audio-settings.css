@@ -1,30 +1,29 @@
 /* Custom styles for the settings menu */
 .custom-settings-menu {
-    position: relative;
-  }
-  
-  /* Style for the cog icon */
-  .cog-icon {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  /* Style for the CC and DV buttons */
-  .cc-dv-buttons {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Style for CC and DV buttons */
-  .vjs-control.vjs-button.vjs-closed-caption-button,
-  .vjs-control.vjs-button.vjs-display-video-button {
-    margin: 5px 0;
-  }
+  position: relative;
+}
+
+/* Style for the cog icon */
+.cog-icon {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Style for CC, Audio Track, and the combined control */
+.vjs-control.vjs-button.vjs-settings-control {
+  margin: 5px 0;
+}
+
+/* Style for the combined CC and Audio Track control */
+.cc-audio-controls {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
