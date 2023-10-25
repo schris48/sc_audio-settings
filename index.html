@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+  <title>Brightcove Player: Disabled Audio Button</title>
+  <style>
+    /* turn off click events for the progress scrubber */
+    .vjs-audio-button{
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Uncomment this style if you would like to hide the progress scrubber but keep the element spacing */
+    /*.vjs-progress-control {
+    visibility: hidden;
+    }*/
+
+    /* Size the player */
+    .video-js {
+      width: 640px;
+      height: 360px;
+    }
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="audio-settings.css">
+  </style>
 </head>
 <body>
-  <div class="brightcove-player-container">
-    <!-- Your Brightcove player goes here -->
-    <video
-      id="your-video-player-id"
-      class="video-js"
-      controls
-      preload="none"
-      data-setup='{ "techOrder": ["html5"] }'
-    >
-      <source src="your-video-source.mp4" type="video/mp4" />
-      <!-- Additional video sources as needed -->
-    </video>
-  </div>
+  <video-js data-video-id="6085480510001"
+    data-account="18140038001"
+    data-player="JQrljZgnO6"
+    data-embed="default"
+    data-application-id
+    class="video-js"
+    controls
+    width="640"
+    height="360"></video-js>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.14.3/video.min.js"></script>
-  <script src="audio-settings.js"></script>
+  <script src="https://players.brightcove.net/18140038001/JQrljZgnO6_default/index.min.js"></script>
 </body>
 </html>
