@@ -1,29 +1,44 @@
-/* Custom styles for the settings menu */
-.custom-settings-menu {
-  position: relative;
-}
-
-/* Style for the cog icon */
-.cog-icon {
-  display: block;
-  font-size: 24px;
+/* Style for the Settings button */
+.vjs-settings-button {
+  /* Define your button styles, e.g., background, text color, border */
+  background-color: #007BFF;
+  color: #fff;
+  border: 1px solid #007BFF;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
-/* Style for CC, Audio Track, and the combined control */
-.vjs-control.vjs-button.vjs-settings-control {
-  margin: 5px 0;
+/* Style for the Settings menu */
+.vjs-menu {
+  /* Define your menu container styles, e.g., background, box shadow */
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
+  position: absolute;
+  display: none;
+  z-index: 100; /* Adjust the z-index to ensure it's above other elements */
 }
 
-/* Style for the combined CC and Audio Track control */
-.cc-audio-controls {
-  display: none; /* Initially hidden */
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: #fff;
-  border: 1px solid #ccc;
+/* Style for menu items */
+.vjs-menu-item {
+  /* Define styles for individual menu items, e.g., padding, background on hover, text color */
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.vjs-menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style for focused menu items (keyboard navigation) */
+.vjs-menu-item:focus {
+  outline: none; /* Remove default focus outline, if desired */
+  background-color: #f0f0f0;
+}
+
+/* Style for button and menu text */
+.vjs-control-text {
+  /* Define text styles, e.g., font size and weight */
+  font-size: 14px;
+  font-weight: normal;
 }
