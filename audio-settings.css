@@ -1,0 +1,32 @@
+.custom-settings-menu {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .custom-settings-button {
+    display: block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin: 5px;
+  }
+  
+  .custom-settings-menu i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .custom-settings-menu.expanded .custom-settings-button {
+    display: block;
+  }
+  
+  .custom-settings-menu.expanded i {
+    margin-right: 0;
+  }
+  
+  .brightcove-player-container {
+    position: relative;
+  }
+  
