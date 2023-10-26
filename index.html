@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="audio-settings.css">
-  <title>Brightcove: Audio Settings</title>
+  <title>SC TEST CUSTOM PLAYER SETTINGS</title>
 </head>
+
 <body>
-  <div class="brightcove-player-container">>
-    <video-js id="JQrljZgnO6"
-      data-account="18140038001"
-      class="video-js"
-      controls=""
-      preload="none"
-      data-setup='{ "techOrder": ["html5"] }'
-      width="960" height="540"></video-js>
-  </div>
-  <script src="https://players.brightcove.net/18140038001/JQrljZgnO6_default/index.min.js"></script>
-  <script src="audio-settings.js"></script>
+
+  <video-js id="JQrljZgnO6"
+    data-account="18140038001"
+    data-player="default"
+    data-embed="default"
+    controls=""
+    width="960" height="540"></video-js>
+    <script src="https://players.brightcove.net/18140038001/JQrljZgnO6_default/index.min.js"></script>
+    <script type="text/javascript" src="sc_customPlayerSettings.js"></script>
+    <script>videojs.getPlayer('JQrljZgnO6').playerSettings();</script>
 </body>
+
 </html>
