@@ -52,5 +52,5 @@ videojs.registerPlugin('settingsPlugin', function () {
 });
 
 // Initialize the plugin on your Brightcove video player
-const player = videojs('your-video-player-id');
+const player = videojs('JQrljZgnO6');
 player.settingsPlugin(); // Call your custom plugin
