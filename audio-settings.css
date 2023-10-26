@@ -1,44 +1,60 @@
-/* Style for the Settings button */
+/* Style the Settings button */
 .vjs-settings-button {
-  /* Define your button styles, e.g., background, text color, border */
-  background-color: #007BFF;
+  /* Add your button styles here */
+  background-color: #333;
   color: #fff;
-  border: 1px solid #007BFF;
-  padding: 5px 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-/* Style for the Settings menu */
-.vjs-menu {
-  /* Define your menu container styles, e.g., background, box shadow */
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border: 1px solid #ccc;
-  position: absolute;
-  display: none;
-  z-index: 100; /* Adjust the z-index to ensure it's above other elements */
+/* Style the gear icon using Font Awesome */
+.vjs-settings-button .fas.fa-gear {
+  font-size: 24px; /* Adjust the size as needed */
 }
 
-/* Style for menu items */
-.vjs-menu-item {
-  /* Define styles for individual menu items, e.g., padding, background on hover, text color */
+/* Style the menu container */
+.vjs-menu {
+  display: none; /* Hide the menu by default */
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the menu items */
+.vjs-menu-content li {
   padding: 10px;
   cursor: pointer;
 }
 
-.vjs-menu-item:hover {
-  background-color: #f0f0f0;
+/* Highlight the selected menu item */
+.vjs-menu-content li[aria-checked="true"] {
+  background-color: #0073e6; /* Change to your preferred highlight color */
+  color: #fff;
 }
 
-/* Style for focused menu items (keyboard navigation) */
-.vjs-menu-item:focus {
-  outline: none; /* Remove default focus outline, if desired */
-  background-color: #f0f0f0;
+/* Show the menu on button click */
+.vjs-settings-button[aria-expanded="true"] + .vjs-menu {
+  display: block;
 }
 
-/* Style for button and menu text */
-.vjs-control-text {
-  /* Define text styles, e.g., font size and weight */
-  font-size: 14px;
-  font-weight: normal;
+/* Hide the original Captions and Audio Track buttons */
+.vjs-subs-caps-button,
+.vjs-audio-button {
+  display: none;
+}
+
+/* Add transitions or animations for a smoother appearance (optional) */
+.vjs-menu {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform-origin: top right;
+  transform: scale(0.9);
+  opacity: 0;
+  transform-origin: top right;
+}
+
+.vjs-settings-button[aria-expanded="true"] + .vjs-menu {
+  transform: scale(1);
+  opacity: 1;
 }
