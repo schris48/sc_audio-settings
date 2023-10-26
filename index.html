@@ -25,15 +25,40 @@
   </style>
 </head>
 <body>
-  <video-js data-video-id="6085480510001"
-    data-account="18140038001"
-    data-player="JQrljZgnO6"
-    data-embed="default"
-    data-application-id
-    class="video-js"
-    controls
-    width="640"
-    height="360"></video-js>
+<div class="vjs-settings-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button">
+  <button class="vjs-settings-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Settings" aria-haspopup="true" aria-expanded="false">
+    <span class="vjs-icon-placeholder" aria-hidden="true">
+      <!-- Replace 'fa-gear' with the actual Font Awesome gear icon class -->
+      <i class="fas fa-gear"></i>
+    </span>
+    <span class="vjs-control-text" aria-live="polite">Settings</span>
+  </button>
+  <div class="vjs-menu">
+    <ul class="vjs-menu-content" role="menu">
+      <li class="vjs-menu-item vjs-texttrack-settings" tabindex="-1" role="menuitem" aria-disabled="false">
+        <span class="vjs-menu-item-text">captions settings</span>
+        <span class="vjs-control-text" aria-live="polite">, opens captions settings dialog</span>
+      </li>
+      <li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="true">
+        <span class="vjs-menu-item-text">captions off</span>
+        <span class="vjs-control-text" aria-live="polite">, selected</span>
+      </li>
+      <li class="vjs-menu-item vjs-subtitles-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="false">
+        <span class="vjs-menu-item-text">English</span>
+        <span class="vjs-control-text" aria-live="polite"></span>
+      </li>
+      <li class="vjs-menu-item vjs-selected vjs-main-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="true">
+        <span class="vjs-menu-item-text">en (Main)</span>
+        <span class="vjs-control-text" aria-live="polite">, selected</span>
+      </li>
+      <li class="vjs-menu-item vjs-alternative-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="false">
+        <span class="vjs-menu-item-text">en (Descriptive)</span>
+        <span class="vjs-control-text" aria-live="polite"></span>
+      </li>
+    </ul>
+  </div>
+</div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.14.3/video.min.js"></script>
   <script src="https://players.brightcove.net/18140038001/JQrljZgnO6_default/index.min.js"></script>
 </body>
