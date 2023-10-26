@@ -1,60 +1,7 @@
-/* Style the Settings button */
-.vjs-settings-button {
-  /* Add your button styles here */
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* Style the gear icon using Font Awesome */
-.vjs-settings-button .fas.fa-gear {
-  font-size: 24px; /* Adjust the size as needed */
-}
-
-/* Style the menu container */
-.vjs-menu {
-  display: none; /* Hide the menu by default */
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Style the menu items */
-.vjs-menu-content li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-/* Highlight the selected menu item */
-.vjs-menu-content li[aria-checked="true"] {
-  background-color: #0073e6; /* Change to your preferred highlight color */
-  color: #fff;
-}
-
-/* Show the menu on button click */
-.vjs-settings-button[aria-expanded="true"] + .vjs-menu {
-  display: block;
-}
-
-/* Hide the original Captions and Audio Track buttons */
-.vjs-subs-caps-button,
-.vjs-audio-button {
-  display: none;
-}
-
-/* Add transitions or animations for a smoother appearance (optional) */
-.vjs-menu {
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform-origin: top right;
-  transform: scale(0.9);
-  opacity: 0;
-  transform-origin: top right;
-}
-
-.vjs-settings-button[aria-expanded="true"] + .vjs-menu {
-  transform: scale(1);
-  opacity: 1;
+.vjs-overlay {
+    background-color: #333333;
+    color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 20px;
 }
