@@ -16,7 +16,10 @@
     width="960" height="540"></video-js>
     <script src="https://players.brightcove.net/18140038001/JQrljZgnO6_default/index.min.js"></script>
     <script type="text/javascript" src="sc_customPlayerSettings.js"></script>
-    <script>videojs.getPlayer('JQrljZgnO6').playerSettings();</script>
+    <script type="text/javascript">
+        var options = {"overlayText": "This data is supplied at initialization!"};
+    </script>
+    <script>videojs.getPlayer('JQrljZgnO6').playerSettings(options);</script>
 </body>
 
 </html>
