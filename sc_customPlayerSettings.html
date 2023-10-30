@@ -1,25 +1,23 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SC TEST CUSTOM PLAYER SETTINGS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sc_customPlayerSettings.css">
+    <title>Video Player Settings</title>
 </head>
-
 <body>
-
-  <video-js id="JQrljZgnO6"
-    data-account="18140038001"
-    data-player="default"
-    data-embed="default"
-    controls=""
-    width="960" height="540"></video-js>
-    <script src="https://players.brightcove.net/18140038001/JQrljZgnO6_default/index.min.js"></script>
-    <script type="text/javascript" src="sc_customPlayerSettings.js"></script>
-    <script type="text/javascript">
-        var options = {"overlayText": "This data is supplied at initialization!"};
-    </script>
-    <script>videojs.getPlayer('JQrljZgnO6').playerSettings(options);</script>
+    <div class="video-player">
+        <button class="settings-button" id="settings-button">
+            <span class="cog-icon"></span> Settings
+        </button>
+        <div class="settings-menu" id="settings-menu">
+            <ul>
+                <li class="menu-item" id="captions">Captions</li>
+                <li class="menu-item" id="audio-track">Audio Track</li>
+            </ul>
+        </div>
+    </div>
+    <script src="sc_customPlayerSettings.js"></script>
 </body>
-
 </html>
